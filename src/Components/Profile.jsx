@@ -1,14 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Profile.css';
 
-const Profile = ({ setPage }) => {
-  const [profile, setProfile] = useState({
-    name: '',
-    email: '',
-    bio: '',
-    avatar: null,
-  });
-
+const Profile = ({ setPage, profile, setProfile }) => {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setProfile(prev => ({ ...prev, [name]: value }));
@@ -17,12 +10,15 @@ const Profile = ({ setPage }) => {
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      setProfile(prev => ({ ...prev, avatar: URL.createObjectURL(file) }));
+      const imageURL = URL.createObjectURL(file);
+      setProfile(prev => ({ ...prev, avatar: imageURL }));
     }
   };
 
   const handleSave = () => {
+    localStorage.setItem('userProfile', JSON.stringify(profile)); // optional (already done in App)
     alert('Profile saved!');
+    setPage('dashboard');
   };
 
   return (
