@@ -1,0 +1,33 @@
+.welcome-container {
+   max-width: 900px;
+   height: 500px;
+  margin: 5rem auto;
+  padding: 3rem;
+  background-color: #ffffff;
+  background-image: url(../assets/welcome.jpg);
+  background-size: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.20);
+  text-align: center;
+  color: rgb(12, 11, 11);
+
+}
+
+.start-button {
+  background-color: #302d2d;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  margin-top: 280px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.start-button:hover {
+  background-color: #b183ee;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+
+}

@@ -1,0 +1,360 @@
+/* App.css */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-image:url(../assets/OIP\ \(1\).webp);
+  background-repeat:repeat;
+
+}
+
+.app-container {
+  max-width: 900px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 24px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.20);
+  position: relative;
+}
+
+/* Header */
+.welcome-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  border-radius: 50%;
+  margin-right: 1rem;
+  width: 45px;
+  height: 45px;
+}
+
+.greeting {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.username {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.notification-icon {
+  font-size: 1.2rem;
+  color: #6c63ff;
+}
+
+/* Task Status Card */
+.task-status {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #6c63ff;
+  color: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-progress {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.progress-circle {
+  background-color: white;
+  color: #6c63ff;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.view-task-btn {
+  background-color: white;
+  color: #6c63ff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* In Progress Section */
+.in-progress h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.progress-cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 250px;
+  background-color: #f1f1f1;
+  border-radius: 16px;
+  padding: 1rem;
+  position: relative;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tag {
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-weight: 500;
+  color: white;
+}
+
+.tag.blue {
+  background-color: #5cbdf7;
+}
+
+.tag.pink {
+  background-color: #ffb3b3;
+}
+
+.small-icon {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.progress-bar {
+  height: 6px;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.office-progress {
+  background-color: #6c63ff;
+  width: 70%;
+}
+
+.personal-progress {
+  background-color: #ff9c8f;
+  width: 40%;
+}
+
+/* Task Groups */
+.task-groups h3 {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+.group-list {
+  margin-top: 1rem;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9f9f9;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+
+.group-details {
+  flex: 1;
+  margin-left: 1rem;
+}
+
+.percentage {
+  font-weight: bold;
+}
+
+.pink {
+  color: #ff6bcb;
+}
+
+.purple {
+  color: #6c63ff;
+}
+
+.orange {
+  color: #ffa500;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.8rem 1rem;
+
+  width: 90vw;                  /* ✅ Responsive width */
+  max-width: 400px;             /* ✅ Prevent it from growing too big on large screens */
+  margin: 0 auto;               /* ✅ Center it horizontally */
+  position: fixed;
+  bottom: 2px;                 /* ✅ Slightly above the edge */
+  left: 0;
+  right: 0;
+ height: 50px;
+  background: rgb(251, 251, 252);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  z-index: 100;
+}
+
+/* Icon styling */
+.nav-icon {
+  font-size: 1.5rem;
+  color: #888;
+  transition: all 0.2s ease;
+}
+
+.nav-icon.active {
+  color: #6c63ff;
+  transform: scale(1.2);
+}
+
+/* Icon labels */
+.nav-label {
+  font-size: 0.7rem;
+  color: #888;
+  margin-top: 2px;
+}
+
+.nav-label.active {
+  color: #6c63ff;
+  font-weight: 500;
+}
+
+/* Nav item wrapper */
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Center + floating plus button */
+.plus-button {
+  background-color: #6c63ff;
+  color: white;
+  border-radius: 50%;
+  padding: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-25%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.plus-button .nav-label {
+  font-size: 0.7rem;
+  margin-top: 2px;
+  color: white;
+}
+
+.group-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  background-color: #f5f6fb;
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.group-form input {
+  flex: 1 1 150px;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: 0.3s;
+}
+
+.group-form input:focus {
+  outline: none;
+  border: 1px solid #6c63ff;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.15);
+}
+
+.group-form button {
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.group-form button:hover {
+  background-color: #574bff;
+}
+.group input {
+  margin: 0.2rem 0.5rem;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.group-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  color: #666;
+}
+
+.group-actions button:hover {
+  color: #111;
+}
+
+.save-btn {
+  color: green;
+}
+
+.edit-btn {
+  color: orange;
+}
+
+.delete-btn {
+  color: red;
+}
+

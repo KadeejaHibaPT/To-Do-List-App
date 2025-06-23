@@ -1,0 +1,40 @@
+.calendar {
+  margin-bottom: 1.5rem;
+}
+
+.calendar h4 {
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.calendar-grid {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.calendar-day {
+  width: 60px;
+  padding: 0.5rem;
+  background: #f1f2f8;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.calendar-day.today {
+  background-color: #6c63ff;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 0 2px #ddd;
+}
+
+.calendar-day p {
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.calendar-day span {
+  font-size: 1.1rem;
+}
