@@ -1,6 +1,6 @@
 .welcome-container {
-   max-width: 900px;
-   height: 500px;
+  max-width: 900px;
+  height: 500px;
   margin: 5rem auto;
   padding: 3rem;
   background-color: #ffffff;
@@ -10,7 +10,7 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.20);
   text-align: center;
   color: rgb(12, 11, 11);
-
+  position: relative;
 }
 
 .start-button {
@@ -23,11 +23,69 @@
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+
 }
 .start-button:hover {
   background-color: #b183ee;
   transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
 
+/* -------------------------
+   Media Queries
+-------------------------- */
 
+/* Phones (< 600px) */
+@media (max-width: 601px) {
+  .welcome-container{
+    background-position: center;
+    background-size:150%;
+    font-size: 1.0rem;
+    line-height: 1.0;
+    width: 96%;
+    height: 480px;
+  }
+  
+  
+}
+
+/* Tablets (600px - 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .welcome-container {
+    padding: 2.5rem;
+    height: 450px;
+    /* margin: 4rem 2rem; */
+    background-position: center;
+    align-items: center;
+    
+    
+  }
+
+  .start-button {
+    margin-top: 250px;
+    padding: 0.9rem 1.8rem;
+    font-size: 1rem;
+  }
+}
+
+/* Laptops (1025px - 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .welcome-container {
+    padding: 3rem;
+    height: 500px;
+   align-items: center;
+  
+    background-position: center;
+    
+  }
+
+  .start-button {
+    margin-top: 280px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
 }
